@@ -155,7 +155,7 @@ export class CheckoutBillingContainer extends PureComponent {
       paymentMethod,
       same_as_shipping: isSameAsShipping,
     });
-    incrementStep();
+    incrementStep(3);
   }
 
   onBillingError(fields, invalidFields, error) {

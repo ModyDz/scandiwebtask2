@@ -8,8 +8,7 @@
     "@scandipwa/scandipwa-scripts": "2.4.21",
     "@tilework/mosaic": "0.1.7",
     "@tilework/mosaic-craco": "0.0.5",
-    "postcss": "8.4.5",
-    "styled-components": "^5.3.5"
+    "postcss": "8.4.5"
   },
   "scandipwa": {
     "type": "theme",

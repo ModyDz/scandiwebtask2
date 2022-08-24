@@ -45,8 +45,8 @@ export class Checkout extends PureComponent {
     super();
     this.state = { currentStep: 1 };
   }
-  incrementStep = () => {
-    this.setState({ currentStep: this.state.currentStep + 1 });
+  incrementStep = (value) => {
+    this.setState({ currentStep: value });
   };
   static propTypes = {
     setLoading: PropTypes.func.isRequired,

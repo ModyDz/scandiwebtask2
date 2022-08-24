@@ -162,7 +162,7 @@ export class CheckoutShippingContainer extends PureComponent {
 
     saveAddressInformation(data);
     updateShippingFields(fields);
-    incrementStep();
+    incrementStep(2);
   }
 
   _getAddressById(addressId) {
