@@ -35,8 +35,8 @@ const Step = styled.div`
   border-radius: 50px;
   position: absolute;
   left: ${(props) => {
-    const progress = props.steps / props.stepIndex;
-    return 100 / progress;
+    const position = props.steps / props.stepIndex;
+    return 100 / position;
   }}%;
   display: flex;
   align-items: center;
