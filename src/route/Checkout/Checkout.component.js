@@ -359,7 +359,11 @@ export class Checkout extends PureComponent {
   render() {
     return (
       <main block="Checkout">
-        <ProgressBar steps={3} currentStep={this.state.currentStep} />
+        <ProgressBar
+          steps={3}
+          currentStep={this.state.currentStep}
+          StepsText={["Shipping", "Review & Payments"]}
+        />
         <ContentWrapper
           wrapperMix={{ block: "Checkout", elem: "Wrapper" }}
           label={__("Checkout page")}

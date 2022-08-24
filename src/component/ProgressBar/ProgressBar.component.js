@@ -30,8 +30,8 @@ const Step = styled.div`
       ? "var(--primary-base-color)"
       : "lightgray"};
   transition: 0.3s ease background-color;
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   border-radius: 50px;
   position: absolute;
   left: ${(props) => {
@@ -41,25 +41,36 @@ const Step = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  top: -120%;
+  top: -200%;
   font-size: 1.5rem;
+  &::after {
+    position: absolute;
+    content: "${(props) => props.stepText}";
+    top: 120%;
+    color: ${(props) =>
+      props.currentStep >= props.stepIndex ? "black" : "lightgray"};
+    white-space: nowrap;
+  }
 `;
 export class ProgressBar extends PureComponent {
   static propTypes = {
     // TODO: implement prop-types
   };
   render() {
-    const { steps, currentStep } = this.props;
+    const { steps, currentStep, StepsText } = this.props;
     return (
       <ProgressBarContainer>
         <CurrentProgress currentStep={currentStep} steps={steps} />
-        {Array(steps)
-          .fill(0)
-          .map((element, index) => (
-            <Step currentStep={currentStep} steps={steps} stepIndex={index + 1}>
-              {index + 1}
-            </Step>
-          ))}
+        {StepsText.map((stepText, index) => (
+          <Step
+            currentStep={currentStep}
+            steps={steps}
+            stepIndex={index + 1}
+            stepText={stepText}
+          >
+            {index + 1}
+          </Step>
+        ))}
       </ProgressBarContainer>
     );
   }
