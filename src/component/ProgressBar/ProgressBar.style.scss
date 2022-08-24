@@ -1,4 +1,3 @@
-$default-primary-base-color: #f26323;
 .ProgressBar {
   background-color: lightgray;
   width: 100%;
@@ -10,18 +9,17 @@ $default-primary-base-color: #f26323;
     position: absolute;
     left: 0;
     transition: width 0.3s ease;
-    background-color: $default-primary-base-color;
+    background-color: var(--primary-base-color);
   }
   &-Step {
     color: white;
-    background-color: $default-primary-base-color;
+    background-color: var(--primary-base-color);
     transition: 0.3s ease background-color;
     height: 40px;
     width: 40px;
     border-radius: 50px;
     position: absolute;
     display: flex;
-    left: 33%;
     align-items: center;
     justify-content: center;
     top: -200%;
